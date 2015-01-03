@@ -1,19 +1,11 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
     <title>Chris Gearhart | Science, Engineering, &amp; Math</title>
     <meta name="description" content="Engineer"/>
-    
-    <link rel='home' href='http://cgearhart.github.io'/>
-    
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
-
-    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,600,300" rel="stylesheet" type="text/css">
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js?v=20130331"></script>
+    {% include head.html %}
 </head>
 
 <body data-spy="scroll" data-target=".menu">
@@ -23,16 +15,16 @@
             <div id="banner-text">
                 <h1>Chris Gearhart</h1>
                 <p>I am a civil service engineer for the US Navy in Southern Maryland and a grad student in Computer Science at Georgia Tech.</p>
-
                 <p>I like <b>hard</b> problems, so <a href="#contact">get in touch</a> to see if I can help with yours.</p>
             </div>
             </div>
         </div>
         <div class="menu" data-spy="affix" data-offset-top="270">
             <ul class="nav">
-                <li><a class="active" href="#main">Home</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#skills">Experience</a></li><li><a href="#contact">Contact</a></li>
+                <li><a class="active" href="#main">Home</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#skills">Experience</a></li><li><a href="#contact">Contact</a></li><li><a href="/blog">Blog</a></li>
             </ul>
-        </div><div id="portfolio" data-stellar-background-ratio="0.2" class="section row-fluid">
+        </div>
+        <div id="portfolio" data-stellar-background-ratio="0.2" class="section row-fluid">
     <div class="container">
         <ul class="items">
             <li class="item span4">
@@ -208,23 +200,13 @@
                     Reach me at chris@gearley.com and find me on <a class='url' title='Chris Gearhart on GitHub' href='http://github.com/cgearhart'>GitHub</a>, <a class='url' title='Chris Gearhart on LinkedIn' href='http://www.linkedin.com/pub/christopher-gearhart/54/470/905'>LinkedIn</a>, and <a class='url' title='Chris Gearhart on Google+' rel='author' href='https://plus.google.com/u/0/104352161487845958599'>Google+</a>
                 </p>
             </div>
-            <div class="floatfix"></div>
         </div>
     </div>
 </div>
 
 </div>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-43060283-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-<script type="text/javascript" src="js/js.js"></script>
+{% include tracking.html %}
+{% include footerjs.html %}
 </body>
 </html>

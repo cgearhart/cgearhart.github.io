@@ -1,0 +1,18 @@
+paginate: 5
+paginate_path: "blog/page:num/"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Chris Gearhart"
+  -
+    scope:
+      path: ""
+      type: "drafts"
+    values:
+      layout: "post"
+      author: "Chris Gearhart"

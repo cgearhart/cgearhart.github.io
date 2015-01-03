@@ -1,0 +1,25 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body class="blog">
+<div class="container" data-stellar-background-ratio="0.2">
+    <div class="title">
+        <h1>Untitled</h1>
+    </div>
+    <div class="row-fluid">
+        <div class="sidemenu span2">
+            {% include nav.html active_item="blog" %}
+        </div>
+        <div id="content" class="span6 offset1">
+            {{ content }}
+        </div>
+    </div>
+</div>
+{% include footerjs.html %}
+{% include tracking.html %}
+</body>
+</html>

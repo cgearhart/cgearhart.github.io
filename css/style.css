@@ -11,26 +11,15 @@ a:hover{text-decoration:none;color:#4b87ff}
 p{margin:0 0 1em;}
 abbr{border-bottom:1px dotted #ddd;cursor:help;}
 b,strong{font-weight:600;}
+pre,code{font-family:"Courier New", Courier, monospace;word-wrap:break-word;}
+pre{padding:0 5px;}
 .muted{opacity:0.5}
 .tooltip{font-size:14px;}
 .tooltip.in{opacity:1;filter:alpha(opacity=1);}
-.floatfix{clear}
 
-.alignleft{float:left;margin-right:10px;}
-.alignright{float:right;margin-left:10px;}
-
-#lang{
-	position:absolute;
-	right:10px;
-	top:10px;
-	padding:10px;
-	background:#f6f6ff;
-	color:#667;
-	border-radius:5px
-}
-#lang:hover{
-	background:#f0f0ff;
-}
+.alignleft{text-align:left;}
+.alignright{text-align:right;}
+.aligncenter{text-align:center;}
 
 .intro{text-align:center;padding-top:20px;height:268px;width:100%;text-align:center;overflow:hidden}
 	.mainintro{display:inline-block;zoom:1;*display:inline;width:100%;max-width:980px;position:relative}
@@ -50,6 +39,23 @@ b,strong{font-weight:600;}
 		.menu.affix li:last-child{border-radius:0 0 5px 0}
 	.menu .nav{margin:0;padding:0;min-width:500px}
 
+.sidemenu{color:#aaa;text-align:right;font-weight:600;text-transform: uppercase; padding-top: 1em;}
+	.sidemenu a{color:#aaa;}
+	.sidemenu li{margin-bottom: .5em;}
+	.sidemenu a.active{color:#fff}
+	.sidemenu a:hover{background:#6D7583;color:#fff;}
+
+.blog{padding:0px;color:#aaa;font-weight: 550;}
+	.blog ul,.blog ol{margin:0;padding:0;list-style:none}
+	.blog .container{width:80%;margin-left:auto;margin-right:auto;}
+	.blog .title{color:#6D7583;padding:40px 60px;font-weight: 50;}
+	.blog .title h1{margin:0;padding:0;color:#fff;font-size:45px;text-align:left!important}
+
+.post{padding:0 0 45px 0;}
+	.post .subtitle{font-size:1.25em;}
+	.post .subtitle a{color:#ddd;font-weight:600;}
+	.post .date{color:#6D7583;}
+
 #content{position:relative;z-index:1;padding:0 0 20px;}
 	#content .title{line-height:32px}
 		#content .single .title{color:#fff;padding:55px 0 20px;margin:0 auto;}
@@ -66,20 +72,12 @@ b,strong{font-weight:600;}
 		#content h3{font-size:18px;}
 		#content .title a{color:#000;}
 		#content .title a:hover{color:#4b87ff;}
-		.featured-image{margin:0 auto;width:630px;display:block;text-align:center;margin-bottom:15px;}
-			.featured-image img{background:#0F1217}
-		pre,code{background:#eee;font-family:"Courier New", Courier, monospace;word-wrap:break-word;}
-			pre{padding:0 5px;}
-	#comments{padding:30px 0 0;border-top:1px dotted #ddd}
-		#comments ul,#comments ol{margin:0;padding:0;list-style:none}
-		#comments .commentsform{width:630px;margin:0 auto;}
-		.singlecomment{box-shadow: 0 8px 14px 0px rgba(0,0,1,0.3);margin:0 0 10px;background:#212936;padding:15px 15px 1px;border:1px solid #0F1217;}
-			.commenter{display:block;border-bottom:1px dotted #ddd;padding-bottom:5px;margin-bottom:5px}
 	#pagebuttons{text-align:center;margin:0 auto 30px;height:0;position:relative;top:-17px;z-index:2;}
 		#pagebuttons.back{top:12px!important;}
 		#pagebuttons .nav{display:inline-block;zoom:1;*display:inline;border-radius:5px;overflow:hidden;background:#ddd;color:#444;border:1px solid #ddd;}
 		#pagebuttons a{background:#fff url('../img/filter-bg.gif');color:#222;font-size:16px;line-height:33px;height:33px;padding:0 10px;display:inline-block;zoom:1;*display:inline;border-left-width:0;border-bottom-color:#ccc;}
 		#pagebuttons a:hover{background:#ededed url('../img/filter-bg-active.gif');}
+
 #portfolio{padding-top:65px;background:#0F1217;border-top:1px #000;border-bottom:1px #000;border-top:1px #000;padding-bottom:30px;position:relative;z-index:1}
 	.items{margin:0;padding:0;list-style:inside none;}
 		.item{box-shadow: 0 8px 14px 0px rgba(0,0,1,0.3);background:#000;position:relative;width:300px;height:238px;margin-bottom:30px;overflow:hidden;}
@@ -108,25 +106,13 @@ b,strong{font-weight:600;}
 	.experience{padding:0 0 50px;margin:0 0 65px;border-bottom:1px dotted #ddd;}
 	#education,#courses,#tools{margin-bottom:25px;}
 
-#contact, #comments{background:#0F1217;padding-bottom:40px;border-top:1px solid #ddd;color:#fff;border-top:1px #000;}
-	#contact h2, #contact h3, #comments h3{color:#fff}
-	.tel,.name-address,.email{padding-left:30px;padding-top:2px;}
-		.email{background:url('../img/email.png') no-repeat 0 0;}
+#contact, .blog{background:#0F1217;padding-bottom:40px;border-top:1px solid #ddd;color:#fff;border-top:1px #000;}
+	#contact h2, #contact h3, .blog h3{color:#fff}
 	.errors,.success{margin:0 0 10px;padding:10px;list-style:none;border:1px solid #000}
 		.errors{background:#d55;}
 		.errors li{margin:0;padding:0;}
 		.success{background:#5d5;color:#252;}
-	label{color:#000;border:1px solid #000;padding:0;margin:0;display:block;margin-bottom:10px;background:#fff;line-height:40px;cursor:text;}
-		label span{color:#000;padding:0 10px;display:inline-block;zoom:1;*display:inline;width:85px;float:left;}
-		label div{overflow:hidden;}
-		label input, label textarea{color:#222;outline:none;background:transparent;border:0;padding:0;margin:0;font:300 16px/19px 'Open sans',Helvetica,Arial,sans-serif;display:inline-block;zoom:1;*display:inline;padding:11px 0;width:100%}
-		label input{height:19px;margin-top:-2px;}
-		label.textarea{height:170px;}
-		label textarea{height:150px;resize:none;}
-		label.email{display:none!important;} /* honeypot */
-	#submit{box-shadow: 0 8px 14px 0px rgba(0,0,1,0.3);position:relative;border-radius:3px;background:#4b87ff;border:0;color:#fff;font:300 16px/21px 'Open sans',Helvetica,Arial,sans-serif;padding:8px 10px;cursor:pointer;}
-		#submit:hover, #submit:active{background:#75A3FF;box-shadow: 0 8px 7px 0px rgba(0,0,1,0.3);}
-
+	
 @media (max-width: 979px) {
 	.item{width:228px;height:181px;}
 	.item .description p{font-size:14px;line-height:18px;}
@@ -159,7 +145,6 @@ b,strong{font-weight:600;}
 		#education .education-item{position:static!important;float:left!important;width:50%!important;}
 
 	h1{font-size:45px;text-align:left!important}
-
 	h2{display:none;}
 	h3{font-size:16px;font-weight:bold}
 	ul li{list-style:outside disc!important;margin-left:18px!important;}
