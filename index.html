@@ -1,9 +1,50 @@
 ---
+title: Chris Gearhart | Science, Engineering, &amp; Math
+intro: <h1>Chris Gearhart</h1>
+       <p>I am a civil service engineer for the US Navy in Southern Maryland and a grad student in Computer Science at Georgia Tech.</p>
+       <p>I like <b>hard</b> problems, so <a href="#contact">get in touch</a> to see if I can help with yours.</p>
+
+projects-shown:
+  - name:        Students.Filters
+    description: <p>Filter package for WEKA implementing the FastICA Independent Components Analysis algorithm.</p>
+                 <p>The package is written in Java and released to the public domain under the UNLICENSE. It uses the Efficient Java Matrix Library (EJML) and integrates with the WEKA toolkit.</p>
+    img:         img/portfolio/StudentsFilters.png
+    url:         https://github.com/cgearhart/students-filters
+  - name:        Chessnut
+    description: <p>A minimal chess game model library that is able to find &amp; validate legal moves.</p>
+                 <p>Chessnut is written in Python and packaged for distribution on PyPI. It has been released to the public domain under the UNLICENSE.</p>
+    img:         img/portfolio/Chessnut.jpg
+    url:         https://github.com/cgearhart/Chessnut
+  - name:        Resound App
+    description: <p>A live demo web app using the Resound library to identify recent number one US pop songs from short song clips recorded with HTML5.</p>
+                 <p>ResoundApp is written in Python using the Google App Engine framework and datastore. It has been released to the public domain under the CC0 license.</p>
+    img:         img/portfolio/ResoundApp.png
+    url:         https://github.com/cgearhart/Resound-App
+
+projects-extra:
+  - name:        Resound
+    description: <p>Audio fingerprinting library based on the algorithm used by the popular Shazam app.</p>
+                 <p>Resound is written in Python (requires Numpy) and packaged for distribution on PyPI. It has been released to the public domain under the CC0 license.</p>
+    img:         img/portfolio/Resound.png
+    url:         https://github.com/cgearhart/Resound
+  - name:        TODO API
+    description: <p>Web app and API backend built as part of a software engineering class at Georgia Tech.</p>
+                 <p>TODO API is written in Python using the Flask microframework and SQLAlchemy. It synchronizes with an Android app written in Java with the Android SDK.</p>
+    img:         img/portfolio/TODO.png
+  - name:        TrafficMat
+    description: <p>At-a-glance traffic updates in a single page Javascript web app that uses HTML5 to allow a Google Map with traffic layer for a specific location to persist between sessions.</p>
+                 <p>TrafficMat is written in Javascript using HTML5 features &amp; the Google Maps API.</p>
+    img:         img/portfolio/TrafficMat.png
+  - name:        Wine Rack API
+    description: <p>Prototype REST API using Django &amp; on Heroku.</p>
+                 <p>The Wine Rack API is written in Python using Django and Django-RestFramework.</p>
+    img:         img/portfolio/WineRack.jpg
+
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Chris Gearhart | Science, Engineering, &amp; Math</title>
+    <title>{{ page.title }}</title>
     <meta name="description" content="Engineer"/>
     {% include head.html %}
 </head>
@@ -13,96 +54,54 @@
         <div class="intro">
             <div class="mainintro">
             <div id="banner-text">
-                <h1>Chris Gearhart</h1>
-                <p>I am a civil service engineer for the US Navy in Southern Maryland and a grad student in Computer Science at Georgia Tech.</p>
-                <p>I like <b>hard</b> problems, so <a href="#contact">get in touch</a> to see if I can help with yours.</p>
+                {{ page.intro }}
             </div>
             </div>
         </div>
         <div class="menu" data-spy="affix" data-offset-top="270">
             <ul class="nav">
-                <li><a class="active" href="#main">Home</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#skills">Experience</a></li><li><a href="#contact">Contact</a></li><li><a href="/blog">Blog</a></li>
+                <li><a class="active" href="#main">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="/blog">Blog</a></li>
             </ul>
         </div>
         <div id="portfolio" data-stellar-background-ratio="0.2" class="section row-fluid">
     <div class="container">
         <ul class="items">
+
+            {% for project in page.projects-shown %}
             <li class="item span4">
-                <a target="_blank" href="https://github.com/cgearhart/students-filters">
-                    <img src="img/portfolio/StudentsFilters.png" alt="" />
+                <a target="_blank" href="{{ project.url }}">
+                    <img src="{{ project.img }}" alt="" />
                     <div class="description">
-                        <h3>Students.Filters</h3>
-                        <p>Filter package for WEKA implementing the FastICA Independent Components Analysis algorithm.</p>
-                        <p>The package is written in Java and released to the public domain under the UNLICENSE. It uses the Efficient Java Matrix Library (EJML) and integrates with the WEKA toolkit.</p>
+                        <h3>{{ project.name }}</h3>
+                        {{ project.description }}
                     </div>
                 </a>
             </li>
-            <li class="item span4">
-                <a target="_blank" href="https://github.com/cgearhart/Chessnut">
-                    <img src="img/portfolio/Chessnut.jpg" alt="" />
-                    <div class="description">
-                        <h3>Chessnut</h3>
-                        <p>A minimal chess game model library that is able to find &amp; validate legal moves.</p>
-                        <p>Chessnut is written in Python and packaged for distribution on PyPI. It has been released to the public domain under the UNLICENSE.</p>
-                    </div>
-                </a>
-            </li>
-            <li class="item span4">
-                <a target="_blank" href="https://github.com/cgearhart/Resound-App">
-                    <img src="img/portfolio/ResoundApp.png" alt="" />
-                    <div class="description">
-                        <h3>Resound App</h3>
-                        <p>A live demo web app using the Resound library to identify recent number one US pop songs from short song clips recorded with HTML5.</p>
-                        <p>ResoundApp is written in Python using the Google App Engine framework and datastore. It has been released to the public domain under the CC0 license.</p>
-                    </div>
-                </a>
-            </li>
+            {% endfor %}
+
         </ul>
         <div id="more">
             <a href="">See more projects</a>
         </div>
         <div id="extra-items">
             <ul class="items">
-            <li class="item span4">
-                <a target="_blank" href="https://github.com/cgearhart/Resound">
-                    <img src="img/portfolio/Resound.png" alt="" />
-                    <div class="description">
-                        <h3>Resound</h3>
-                        <p>Audio fingerprinting library based on the algorithm used by the popular Shazam app.</p>
-                        <p>Resound is written in Python (requires Numpy) and packaged for distribution on PyPI. It has been released to the public domain under the CC0 license.</p>
-                    </div>
-                </a>
-            </li>
-            <li class="item span4">
-                <a target="_blank" href="">
-                    <img src="img/portfolio/TODO.png" alt="" />
-                    <div class="description">
-                        <h3>TODO API</h3>
-                        <p>Web app and API backend built as part of a software engineering class at Georgia Tech.</p>
-                        <p>TODO API is written in Python using the Flask microframework and SQLAlchemy. It synchronizes with an Android app written in Java with the Android SDK.</p>
-                    </div>
-                </a>
-            </li>
-            <li class="item span4">
-                <a target="_blank" href="">
-                    <img src="img/portfolio/TrafficMat.png" alt="" />
-                    <div class="description">
-                        <h3>TrafficMat</h3>
-                        <p>At-a-glance traffic updates in a single page Javascript web app that uses HTML5 to allow a Google Map with traffic layer for a specific location to persist between sessions.</p>
-                        <p>TrafficMat is written in Javascript using HTML5 features &amp; the Google Maps API.</p>
-                    </div>
-                </a>
-            </li>
+
+                {% for project in page.projects-extra %}
                 <li class="item span4">
-                    <a target="_blank" href="">
-                        <img src="img/portfolio/WineRack.jpg" alt="" />
+                    <a target="_blank" href="{{ project.url }}">
+                        <img src="{{ project.img }}" alt="" />
                         <div class="description">
-                            <h3>Wine Rack API</h3>
-                            <p>Prototype REST API using Django &amp; on Heroku.</p>
-                            <p>The Wine Rack API is written in Python using Django and Django-RestFramework.</p>
+                            <h3>{{ project.name }}</h3>
+                            {{ project.description }}
                         </div>
                     </a>
                 </li>
+
+                {% endfor %}
                 <li id="github">
                     <a target="_blank" href="http://github.com/cgearhart">
                         <img src="img/portfolio/github.png" alt="" />
