@@ -1,1 +1,6 @@
 _site
+_INSTRUCTIONS.md
+Gemfile
+Gemfile.lock
+_drafts/*
+links
