@@ -5,16 +5,10 @@
 
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js?v=20130331"></script>
     <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
-    <!-- Cross browser font loading support -->
-    <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
-    <script>
-        WebFont.load({
-            google: {
-                families: ['Arvo', 'Open+Sans:300italic,600,300']
-            }
-        })
-    </script>
+    <!-- cross-browser font loading support -->
+    <script>var link = document.createElement('link'),url = ~navigator.userAgent.indexOf('MSIE 10.0') ? '/css/ie.css':'//fonts.googleapis.com/css?family=Arvo%7COpen+Sans:300italic,600,300&subset=latin';link.setAttribute('rel', 'stylesheet');link.setAttribute('href', url);document.getElementsByTagName('head')[0].appendChild(link);</script>
