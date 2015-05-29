@@ -42,183 +42,208 @@ projects-extra:
                  <p>The Wine Rack API is written in Python using Django and Django-RestFramework.</p>
     img:         img/portfolio/WineRack.jpg
     url:         https://bitbucket.org/cgearhart/wineapp
+
+degrees:
+  - name:           Masters of Science, Computer Science
+    date:           (expected) 2016
+    school:         Georgia Tech
+    specialization: Specialization in Computational Perception &amp; Robotics
+  - name:           Bachelors of Science, Mechanical Engineering
+    date:           2007
+    school:         Cal Poly, San Luis Obispo
+    specialization: Concentration in Mechatronics
+
+jobs:
+  - name:       Systems Engineer, US Navy (Civil Service)
+    startDate:  2012
+    endDate:    Present
+    item1:      Developed safety &amp; technical requirements for next-generation Rocket Assisted Take-Off (RATO) motor.
+    item2:      Resolved combustion instability in solid fuel rocket motor propellant to eliminate target drone crashes and resume production of legacy RATO motors. 
+    item3:      Lead technical authority of a Joint Capability Technology Demonstration for a new, fixed-wing capable 2.75" rocket guidance section.
+  - name:       Technology Analyst, US Navy (Civil Service)
+    startDate:  2010
+    endDate:    2012
+    item1:      Developed comparative analysis of all planned US Navy air weapon acquisition investments relative to historical budgets for the Office of the Chief of Naval Operations, Air Warfare division.
+    item2:      Conducted technology evaluation for next-generation long-range rocket motors &amp; airborne laser weapon demonstrations.
+    item3:
+  - name:       Operations Research Analyst, US Navy (Civil Service)
+    startDate:  2008
+    endDate:    2010
+    item1:      Used design of experiments to investigate insensitive munitions (IM) performance of Navy general purpose bombs by conducting a mixed-level, blocked fractional factorial experimental design with centerpoints to evaluate potential bomb liner constituent materials.
+    item2:      Developed and executed numerical &amp; statistical models for warfare analysis simulations.
+    item3:      Built a sympathetic detonation model in CTH to simulate IM characteristics for GP bombs.
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ page.title }}</title>
-    <meta name="description" content="Engineer"/>
-    {% include head.html %}
+  <title>{{ page.title }}</title>
+  <meta name="description" content="Engineer"/>
+  {% include head.html %}
 </head>
 
 <body data-spy="scroll" data-target=".menu">
-    <div id="main">
-        <div class="intro">
-            <div class="mainintro">
-            <div id="banner-text">
-                {{ page.intro }}
-            </div>
-            </div>
+
+  <div id="main">
+    
+    <div class="intro">
+      <div class="mainintro">
+        <div id="banner-text">
+          {{ page.intro }}
         </div>
-        <div class="menu" data-spy="affix" data-offset-top="270">
-            <ul class="nav">
-                <li><a class="active" href="#main">Home</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#skills">Experience</a></li><li><a href="#contact">Contact</a></li><li><a href="/blog">Blog</a></li>
-            </ul>
-        </div>
-        <div id="portfolio" data-stellar-background-ratio="0.2" class="section row-fluid">
-    <div class="container">
+      </div>
+    </div>
+
+    <div class="menu" data-spy="affix" data-offset-top="270">
+      <ul class="nav">
+        <li><a class="active" href="#main">Home</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li><!-- <li><a href="/blog">Blog</a></li> -->
+      </ul>
+    </div>
+
+    <div id="portfolio" data-stellar-background-ratio="0.2" class="section row-fluid">
+      <div class="container">
         <ul class="items">
 
-            {% for project in page.projects-shown %}
+          {% for project in page.projects-shown %}
+          <li class="item span4">
+            <a target="_blank" href="{{ project.url }}">
+              <img src="{{ project.img }}" alt="" />
+              <div class="description">
+                <h3>{{ project.name }}</h3>
+                {{ project.description }}
+              </div>
+            </a>
+          </li>
+          {% endfor %}
+
+        </ul>
+        
+        <div id="more">
+          <a href="">See more projects</a>
+        </div>
+
+        <div id="extra-items">
+          <ul class="items">
+
+            {% for project in page.projects-extra %}
             <li class="item span4">
-                <a target="_blank" href="{{ project.url }}">
-                    <img src="{{ project.img }}" alt="" />
-                    <div class="description">
-                        <h3>{{ project.name }}</h3>
-                        {{ project.description }}
-                    </div>
-                </a>
+              <a target="_blank" href="{{ project.url }}">
+                <img src="{{ project.img }}" alt="" />
+                <div class="description">
+                  <h3>{{ project.name }}</h3>
+                  {{ project.description }}
+                </div>
+              </a>
             </li>
             {% endfor %}
 
-        </ul>
-        <div id="more">
-            <a href="">See more projects</a>
-        </div>
-        <div id="extra-items">
-            <ul class="items">
+            <li id="github">
+              <a target="_blank" href="http://github.com/cgearhart">
+                <img src="img/portfolio/github.png" alt="" />
+              </a>
+            </li>
 
-                {% for project in page.projects-extra %}
-                <li class="item span4">
-                    <a target="_blank" href="{{ project.url }}">
-                        <img src="{{ project.img }}" alt="" />
-                        <div class="description">
-                            <h3>{{ project.name }}</h3>
-                            {{ project.description }}
-                        </div>
-                    </a>
-                </li>
-
-                {% endfor %}
-                <li id="github">
-                    <a target="_blank" href="http://github.com/cgearhart">
-                        <img src="img/portfolio/github.png" alt="" />
-                    </a>
-                </li>
-            </ul>
+          </ul>
         </div>
+
+      </div>
     </div>
-</div>
-<div id="skills" class="section">
-    <div class="container">
+
+    <div id="experience" class="section">
+      <div class="container">
+      
         <h2>Experience</h2>
         <div class="row-fluid context">
-            <p>I am a systems engineer at the Naval Air Warfare Center Aircraft Division, Patuxent River (NAWCAD). As the lead systems engineer for several types of air-launched weapons, I am responsible for ensuring that those weapons safely and reliably meet Navy requirements. I also moonlight as a grad student in Computer Science at Georgia Tech, with coursework focusing on Computational Perception &amp; Robotics, Artificial Intelligence, and Machine Learning.</p> 
-
-            <p>Since 2008, I have applied sound mechanical and software engineering principles in warhead development, operations research, advanced technology development &amp; evaluation, rocket motor production, and systems engineering. My varied experience gives me a broad perspective for recognizing and solving technical challenges across multiple disciplines. I look for <em>hard</em> problems to work on &ndash; and my experience demonstrates that I'm not afraid to learn complex new fields in order to be successful.</p>
+          <p>I am a systems engineer at the Naval Air Warfare Center Aircraft Division, Patuxent River (NAWCAD) with a proven history of applying my knowledge and experience across diverse technical domains including warhead development, operations research, advanced technology development &amp; evaluation, rocket motor production engineering, and guided missile systems engineering. I also moonlight as a grad student in Computer Science at Georgia Tech. I am interested in software development projects where I can fully utilize my education, with an emphasis on computational perception, artificial intelligence, and machine learning.</p>
         </div>
-        <hr>
-        <div class="row-fluid" id="history">
-            <div id="jobs" class="span8">
-                <div class="job">
-                    <h3>Systems Engineer, US Navy<span class='year'> – 2012-Present</span></h3>
-                    <ul>
-                        <li>•   Developed safety &amp; technical requirements for next-generation Rocket Assisted Take-Off (RATO) motor.</li>
-                        <li>•   Resolved combustion instability in solid fuel rocket motor propellant to eliminate target drone crashes and resume production of legacy RATO motors.</li>
-                        <li>•   Lead technical authority of a Joint Capability Technology Demonstration for a new, fixed-wing capable 2.75" rocket guidance section.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Advanced Technology Development, US Navy<span class='year'> – 2010-2012</span></h3>
-                    <ul>
-                        <li>•   Developed comparative analysis of all planned US Navy air weapon acquisition investments relative to historical budgets for the Office of the Chief of Naval Operations, Air Warfare division.</li>
-                        <li>•   Conducted technology evaluation for next-generation long-range rocket motors &amp; airborne laser weapon demonstrations.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Operations Research Analyst, US Navy<span class='year'> – 2008-2010</span></h3>
-                    <ul>
-                        <li>•   Used design of experiments to investigate insensitive munitions (IM) performance of Navy general purpose bombs by conducting a mixed-level, blocked fractional factorial experimental design with centerpoints to evaluate potential bomb liner constituent materials.</li>
-                        <li>•   Developed and executed numerical &amp; statistical models for warfare analysis simulations.</li>
-                        <li>•   Built a sympathetic detonation model in CTH to simulate IM characteristics for GP bombs.</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <h3>Academic Projects &amp; Reports (Unpublished)</h3>
-                    <ul>
-                        <li>•   Review of Selected Computer Vision Techniques for Optical Flow, Motion Tracking, &amp; Gesture Recognition (2015)</li>
-                        <li>•   Designing an AI Agent to use Visual Reasoning in Solving Raven's Progressive Matrices (2015)</li>
-                        <li>•   Reinforcement Learning in Markov Decision Processes (2014)</li>
-                        <li>•   Local Randomized Search, Clustering, &amp; Unsupervised Learning Methods (2014)</li>
-                        <li>•   Survey of Supervised Learning Methods -- SVM, k-NN, Boosting, Decision Trees, and ANNs (2014)</li>
-                        <li>•   Localization Using Ultrasonic Sensors in an Electronic Travel Aid (2007)</li>
-                        <li>•   Playing Card Identification Under Similarity Transform Using Geometric Hashing (2007)</li>
-                        <li>•   Autonomous Robot using Motorolla MC68HC12 (2006)</li>
-                    </ul>
-                </div>
+
+        <div class="aligncenter pub"><b>Key Skills:</b> Python (OpenCV, Numpy/Scipy, Django, Flask), Matlab, Java (Android &amp; WEKA), Javascript, HTML5, CSS, C; SQLite, Postgresql, GAE Datastore (NoSQL); git</div>
+
+        <div id="skills" class="row-fluid">
+          <div class="entries">
+
+
+            <h3>Education</h3><hr>
+            {% for degree in page.degrees %}
+            <div class="entry">
+              <div class="span8"><h4>{{ degree.name }}</h4></div><div class="year span4"><h4>{{ degree.date }}</h4></div>
+              <b class="upper">{{ degree.school }}</b>  &mdash; {{ degree.specialization }}
             </div>
-            <div id="education" class="span4">
-                <h3>Education</h3>
-                <div class="education-item">
-                    <h4>Georgia Tech – 2016 (anticipated)</h4>
-                    <p>Masters of Science, Computer Science</p>
-                    <p>Specialization in Computational Perception &amp; Robotics</p>
-                </div>
-                <div class="education-item">
-                    <h4>Cal Poly, San Luis Obispo - 2007</h4>
-                    <p>Bachelors of Science, Mechanical Engineering</p>
-                    <p>Concentration in Mechatronics</p>
-                </div>
+            {% endfor %}
+            
+
+            <h3>Work History</h3><hr>
+            {% for job in page.jobs %}
+            <div class="entry">
+              <div class="span8"><h4>{{ job.name }}</h4></div><div class="year span4"><h4>{{ job.startDate }}&mdash;{{ job.endDate }}</h4></div>
+              <ul>
+                {% if job.item1 %}<li>•   {{ job.item1 }}</li>{% endif %}
+                {% if job.item2 %}<li>•   {{ job.item2 }}</li>{% endif %}
+                {% if job.item3 %}<li>•   {{ job.item3 }}</li>{% endif %}
+              </ul>
+            </div>
+            {% endfor %}
+
+
+            <h3>Academic Projects &amp; Reports</h3><hr>
+            <div class="entry">
+              <b><span class="upper">Machine Learning</span></b> &mdash; Python (Numpy, Pandas, Scikit-learn) &amp; Java (WEKA)
+              <ul>
+                <li></li>
+                <li>•   <span class="pub">Reinforcement Learning in Markov Decision Processes</span> (2014)</li>
+                <li>•   <span class="pub">Local Randomized Search, Clustering, &amp; Unsupervised Learning Methods</span> (2014)</li>
+                <li>•   <span class="pub">Survey of Supervised Learning Methods &mdash; SVM, k-NN, Boosting, Decision Trees, and ANNs</span> (2014)</li>
+              </ul>
             </div>
 
-            <div id="tools" class="span4">
-                <h3>Programming</h3>
-                <ul>
-                    <li><b>Python:</b> Numpy/Scipy, Django, Flask, SqlAlchemy, Pandas, Nose</li>
-                    <li><b>Java:</b> Android, JUnit, WEKA</li>
-                    <li><b>Scientific/Numeric Computing:</b> Matlab &amp; GNU Octave</li>
-                    <li><b>Web Development:</b> JavaScript, HTML5, &amp; CSS3</li>
-                    <li><b>Databases:</b> SQLite, Postgres, GAE Datastore</li>
-                    <li><b>Version Control:</b> Git</li>
-                    <li><b>Other:</b> C and Go</li>
-                </ul>
+            <div class="entry">
+              <b><span class="upper">Computer Vision</span></b> &mdash; Python (Numpy &amp; OpenCV), Matlab &amp; GNU Octave
+              <ul>
+                <li></li>
+                <li>•   <span class="pub">Review of Computer Vision Techniques for Optical Flow, Motion Tracking, &amp; Gesture Recognition</span> (2015)</li>
+                <li>•   <span  class="pub">Designing an AI Agent to use Visual Reasoning in Solving Raven's Progressive Matrices</span> (2015)</li>
+                <li>•   <span class="pub">Playing Card Identification Under Similarity Transform Using Geometric Hashing</span> (2007)</li>
+              </ul>
             </div>
 
-            <div id="courses" class="span4">
-                <h3>Courses</h3>
-                <ul>
-                    <li>Software Development Processes [GT]</li>
-                    <li>Machine Learning [GT]</li>
-                    <li>Knowledge-Based Artificial Intelligence [GT]</li>
-                    <li>Computer Vision [GT]</li>
-                    <li>Relational Databases [Stanford - IS]</li>
-                    <li>Machine Learning [Stanford - IS]</li>
-                    <li>Intro to Artificial Intelligence [Stanford - IS]</li>
-                    <li>Computer Vision [Cal Poly]</li>
-                    <li>Robotics [Cal Poly]</li>
-                    <li>Control Systems [Cal Poly]</li>
-                </ul>
+            <div class="entry">
+              <b><span class="upper">Embedded Development</span></b> &mdash; C
+              <ul>
+                <li>•   <span  class="pub">Localization Using Ultrasonic Sensors in an Electronic Travel Aid</span> (2007)</li>
+                <li>•   <span  class="pub">Autonomous Robot using Motorolla MC68HC12</span> (2006)</li>
+              </ul>
             </div>
 
+            <div class="entry">
+              <b><span class="upper">Web &amp; Mobile Development</span></b> &mdash; Android (Java), Python (Django, Flask, &amp; SqlAlchemy), Javascript, HTML5, and CSS3
+              <ul>
+                <li>•   Android/web-app synchronization (2014)</li>
+              </ul>
+            </div>
+
+                
+              </ul>
+            </div>
+            
+          </div>
         </div>
+
+      </div>
     </div>
-</div>
-<div id="contact" class="section" data-stellar-background-ratio="0.2">
-    <div class="container">
+
+    <div id="contact" data-stellar-background-ratio="0.2" class="section">
+      <div class="container">
         <h3>Contact Info</h3>
-        <div class="row-fluid">
-            <div class="column">
-                <p class="social">
-                    Reach me at chris@gearley.com and find me on <a class='url' title='Chris Gearhart on GitHub' href='http://github.com/cgearhart'>GitHub</a>, <a class='url' title='Chris Gearhart on LinkedIn' href='http://www.linkedin.com/pub/christopher-gearhart/54/470/905'>LinkedIn</a>, and <a class='url' title='Chris Gearhart on Google+' rel='author' href='https://plus.google.com/u/0/104352161487845958599'>Google+</a>
-                </p>
-            </div>
+        <div class="row-fluid column">
+          <p class="social">
+            Reach me at chris@gearley.com and find me on <a class='url' title='Chris Gearhart on GitHub' href='http://github.com/cgearhart'>GitHub</a>, <a class='url' title='Chris Gearhart on LinkedIn' href='http://www.linkedin.com/pub/christopher-gearhart/54/470/905'>LinkedIn</a>, and <a class='url' title='Chris Gearhart on Google+' rel='author' href='https://plus.google.com/u/0/104352161487845958599'>Google+</a>
+          </p>
         </div>
+      </div>
     </div>
-</div>
 
-</div>
+  </div>
 
-{% include tracking.html %}
-{% include footerjs.html %}
+  {% include tracking.html %}
+  {% include footerjs.html %}
 </body>
 </html>
