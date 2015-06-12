@@ -45,7 +45,7 @@ projects-extra:
 
 degrees:
   - name:           Masters of Science, Computer Science
-    date:           (expected) 2016
+    date:           (planned) 2016
     school:         Georgia Tech
     specialization: Specialization in Computational Perception &amp; Robotics
   - name:           Bachelors of Science, Mechanical Engineering
@@ -57,21 +57,14 @@ jobs:
   - name:       Systems Engineer, US Navy (Civil Service)
     startDate:  2012
     endDate:    Present
-    item1:      Developed safety &amp; technical requirements for next-generation Rocket Assisted Take-Off (RATO) motor.
-    item2:      Resolved combustion instability in solid fuel rocket motor propellant to eliminate target drone crashes and resume production of legacy RATO motors. 
-    item3:      Lead technical authority of a Joint Capability Technology Demonstration for a new, fixed-wing capable 2.75" rocket guidance section.
-  - name:       Technology Analyst, US Navy (Civil Service)
-    startDate:  2010
-    endDate:    2012
-    item1:      Developed comparative analysis of all planned US Navy air weapon acquisition investments relative to historical budgets for the Office of the Chief of Naval Operations, Air Warfare division.
-    item2:      Conducted technology evaluation for next-generation long-range rocket motors &amp; airborne laser weapon demonstrations.
-    item3:
+    item1:      As the lead technical authority for air-to-ground missiles at PMA-242, initiated production kickoff for Maverick modernization, and led qualification &amp; testing effort for two additional missile systems.
+    item2:      As a deputy engineer at PMA-242, led fixed-wing APKWS II guided rocket Joint Capability Technology Demonstration (JCTD) with USAF, and led production restart of MK-117 rocket motors by concluding an engineering investigation of propellant formulation.
   - name:       Operations Research Analyst, US Navy (Civil Service)
     startDate:  2008
-    endDate:    2010
-    item1:      Used design of experiments to investigate insensitive munitions (IM) performance of Navy general purpose bombs by conducting a mixed-level, blocked fractional factorial experimental design with centerpoints to evaluate potential bomb liner constituent materials.
-    item2:      Developed and executed numerical &amp; statistical models for warfare analysis simulations.
-    item3:      Built a sympathetic detonation model in CTH to simulate IM characteristics for GP bombs.
+    endDate:    2012
+    item1:      Developed predictive models using response surface methods, numerical analysis, and stochastic modeling (Monte Carlo simulations) to guide future technology investment decisions.
+    item2:      Designed and conducted factor screening and design sensitivity experiments to inform system requirements planning analyses.
+    item3:      Built a sympathetic detonation model to simulate insensitive munitions characteristics for GP bombs.
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -153,22 +146,13 @@ jobs:
       
         <h2>Experience</h2>
         <div class="row-fluid context">
-          <p>I am a systems engineer at the Naval Air Warfare Center Aircraft Division, Patuxent River (NAWCAD) with a proven history of applying my knowledge and experience across diverse technical domains including warhead development, operations research, advanced technology development &amp; evaluation, rocket motor production engineering, and guided missile systems engineering. I also moonlight as a grad student in Computer Science at Georgia Tech. I am interested in software development projects where I can fully utilize my education, with an emphasis on computational perception, artificial intelligence, and machine learning.</p>
+          <p>I am a full-time systems engineer with several years of experience working for the US Navy, and I am interested in positions emphasizing machine learning and computer vision applications. I anticipate completing an MS in computer science from Georgia Tech in May 2016 through a distance-learning program.</p>
         </div>
 
         <div class="aligncenter pub"><b>Key Skills:</b> Python (OpenCV, Numpy/Scipy, Django, Flask), Matlab, Java (Android &amp; WEKA), Javascript, HTML5, CSS, C; SQLite, Postgresql, GAE Datastore (NoSQL); git</div>
 
         <div id="skills" class="row-fluid">
           <div class="entries">
-
-
-            <h3>Education</h3><hr>
-            {% for degree in page.degrees %}
-            <div class="entry">
-              <div class="span8"><h4>{{ degree.name }}</h4></div><div class="year span4"><h4>{{ degree.date }}</h4></div>
-              <b class="upper">{{ degree.school }}</b>  &mdash; {{ degree.specialization }}
-            </div>
-            {% endfor %}
             
 
             <h3>Work History</h3><hr>
@@ -184,22 +168,37 @@ jobs:
             {% endfor %}
 
 
-            <h3>Academic Projects &amp; Reports</h3><hr>
+            <h3>Education</h3><hr>
+            {% for degree in page.degrees %}
+            <div class="entry">
+              <div class="span8"><h4>{{ degree.name }}</h4></div><div class="year span4"><h4>{{ degree.date }}</h4></div>
+              <b class="upper">{{ degree.school }}</b>  &mdash; {{ degree.specialization }}
+            </div>
+            {% endfor %}
+
+
+            <h3>Competitions, Academic Projects, &amp; Reports</h3><hr>
+            <div class="entry">
+              <b><span class="upper">Competitions</span></b> &mdash; Python (Numpy, Pandas, Pylearn2, scikit-learn)
+              <ul>
+                <li>•   <span class="pub">MNIST Handwritten Digit Recognition</span> (ranked 45/645 with > 99% test accuracy)</li>
+                <li>•   <span class="pub">Predicting Closed Stack Overflow Questions</span> (ranked 73/161)</li>
+              </ul>
+            </div>
+
             <div class="entry">
               <b><span class="upper">Machine Learning</span></b> &mdash; Python (Numpy, Pandas, Scikit-learn) &amp; Java (WEKA)
               <ul>
-                <li></li>
                 <li>•   <span class="pub">Reinforcement Learning in Markov Decision Processes</span> (2014)</li>
                 <li>•   <span class="pub">Local Randomized Search, Clustering, &amp; Unsupervised Learning Methods</span> (2014)</li>
-                <li>•   <span class="pub">Survey of Supervised Learning Methods &mdash; SVM, k-NN, Boosting, Decision Trees, and ANNs</span> (2014)</li>
+                <li>•   <span class="pub">Supervised Learning Methods &mdash; SVM, k-NN, Boosting, Decision Trees, and ANNs</span> (2014)</li>
               </ul>
             </div>
 
             <div class="entry">
               <b><span class="upper">Computer Vision</span></b> &mdash; Python (Numpy &amp; OpenCV), Matlab &amp; GNU Octave
               <ul>
-                <li></li>
-                <li>•   <span class="pub">Review of Computer Vision Techniques for Optical Flow, Motion Tracking, &amp; Gesture Recognition</span> (2015)</li>
+                <li>•   <span class="pub">Computer Vision Techniques for Optical Flow, Motion Tracking, &amp; Gesture Recognition</span> (2015)</li>
                 <li>•   <span  class="pub">Designing an AI Agent to use Visual Reasoning in Solving Raven's Progressive Matrices</span> (2015)</li>
                 <li>•   <span class="pub">Playing Card Identification Under Similarity Transform Using Geometric Hashing</span> (2007)</li>
               </ul>
@@ -235,7 +234,7 @@ jobs:
         <h3>Contact Info</h3>
         <div class="row-fluid column">
           <p class="social">
-            Reach me at chris@gearley.com and find me on <a class='url' title='Chris Gearhart on GitHub' href='http://github.com/cgearhart'>GitHub</a>, <a class='url' title='Chris Gearhart on LinkedIn' href='http://www.linkedin.com/pub/christopher-gearhart/54/470/905'>LinkedIn</a>, and <a class='url' title='Chris Gearhart on Google+' rel='author' href='https://plus.google.com/u/0/104352161487845958599'>Google+</a>
+            Reach me at chris@gearley.com and find me on <a class='url' title='Chris Gearhart on GitHub' href='http://github.com/cgearhart'>GitHub</a>, <a class='url' title='Chris Gearhart on LinkedIn' href='http://www.linkedin.com/pub/christopher-gearhart/54/470/905'>LinkedIn</a>, <a class='url' title='Chris Gearhart on Kaggle' href='https://www.kaggle.com/cgearhart'>Kaggle</a>, and <a class='url' title='Chris Gearhart on Google+' rel='author' href='https://plus.google.com/u/0/104352161487845958599'>Google+</a>
           </p>
         </div>
       </div>
